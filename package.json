@@ -3,14 +3,14 @@
   "version": "0.2.8",
   "description": "Perfectionist Frontend Generator",
   "author": {
-    "name": "Logesh Paul",
-    "email": "logeshpaul@gmail.com",
-    "url": "https://github.com/logeshpaul"
+    "name": "Oscar Pabon",
+    "email": "opabon@stt.com.co",
+    "url": "https://github.com/oscarandresestrellal"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/FuelFrontend/generator-smacss/blob/master/LICENSE-MIT.md"
+      "url": "https://github.com/oscarandresestrella/generator-stt/blob/master/LICENSE-MIT.md"
     }
   ],
   "keywords": [
@@ -32,7 +32,7 @@
     "script-base.js",
     "util.js"
   ],
-  "repository": "FuelFrontend/generator-smacss",
+  "repository": "generator-stt",
   "scripts": {
     "test": "mocha --reporter spec"
   },
