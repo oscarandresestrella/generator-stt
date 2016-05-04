@@ -1,33 +1,21 @@
-# Generator for Frontend Projects
+# Generador para proyectos frontend
 
-Perfectionist generator that scaffolds out different types of Frontend application
+Generador enfocado a desarrollo personal
 
-[![Join the chat at https://gitter.im/FuelFrontend/generator-stt](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/FuelFrontend/generator-stt?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Travis CI](https://api.travis-ci.org/FuelFrontend/generator-stt.svg?branch=master)](https://travis-ci.org/FuelFrontend/generator-stt) [![Code Climate](https://codeclimate.com/github/FuelFrontend/generator-stt/badges/gpa.svg)](https://codeclimate.com/github/FuelFrontend/generator-stt)
 
-![Generator stt](https://raw.githubusercontent.com/FuelFrontend/generator-stt/master/stt-in-action.png "Generator stt")
+# Tipos de App
 
-# Features
-
-- **Different Projects; One Generator** - Create your type of project in fairly simple steps
-- **Highly Maintainable** - Uses [stt](https://stt.com/) approach (BEM, OOCSS, ITCSS in backlog)
-- **Readymade** — Directory structure, Naming convention, Linking your app done right.
-- **Speedy Workflow** - CSS Preprocessor (Sass), Partials, Browser Sync, Live reload.
-- **Performance Matters**  - Minify HTML, CSS, & JS. Optimize Images.
-- **Quick Commands** - Generate Build, Clean up, Zip project, Angular commands and lot more to come.
-
-# App Types
-
-- **Simple Web App** — Sometimes you just need a gulp server(localhost), scss compiler & browser-sync(live reload). Well that's exactly what this app is for.
-- **Full Pack Web App** - Thinking of creating a solid frontend base with proper structure, well optimization; choose this applicaton type which comes with power features.
-- **Angular App** - Angular app with basic configurations and quick commands for creating controllers, directives, services and filters. More to come!
-- **Restify App** - API developer? Want to create REST API services with mongodb, This app type got your back which scaffolds basic files like models, controller, routes, db & config.
-- **Admin Web App** - Create an Admin app with bootstrap integrated. Pages: Dashboard, Sidebar, Notfication, Forms, Tabular Data and Bootstrap Elements for quick use.
+- **Simple Web App** — Generador basico de pagina html sin ambientes
+- **Full Pack Web App** - Generador de ambiente de desarrollo de vistas, com ambiente de desarrollo y produccion
+- **Angular App** - Generador basico de angular
+- **Restify App** - RestApi basico con mongose
+- **Admin Web App** - Generador de administratorrapido basado en angular
 
 # Getting Started
 
 **Installation**
 
-You need to have [NodeJS](http://nodejs.org/) & [Yeoman](http://yeoman.io/) installed on your machine
+Se tiene que tener instalado  [NodeJS](http://nodejs.org/) & [Yeoman](http://yeoman.io/).
 ```````
 npm install -g yo
 ````````
@@ -37,42 +25,37 @@ Install stt generator
 npm install --global generator-stt
 ```````
 
-**Creating project**
+**Creando un proyecto**
 
-- Run `yo stt`
-- Answer simple questions in terminal
-- Generator will automatically try to install dependencies in your project folder.
+- Corre `yo stt`
+- Responde las simples preguntas de la terminal
+- El generador crea y configura todo automaticamente
 
-- You got your installation successfull 'You are lucky', run the server following the instruction in next section.
-- In case you got any error you may not have admin rights
-    - a) cd to your project folder
-    - b) Run `sudo bower install & npm install` followed by your machine password in Mac/Linux environment; Windows user try running as administrator
+- Si la instalaciòn fue satisfactoria, ve a la siguiente sección
+- En caso de error mira lo siguiente
+    - a) cd a la carpeta del proyecyo
+    - b) corre `bower install & npm install` como administrador
 
-**Run your project**
+**Corriendo el proyecto**
 
-At this stage your project is setup and dependencies are installed, It's showtime!
+En este momento ya esta todo configurado, asi que es el momento de colocar manos a la obra
 
-- Run `gulp` to run the server, and you are good to start your development.
+- Corre `gulp` para correr el servidor, y ya puedes comenzar tu desarrollo.
 
-# Directory Structure
 
-Your directory structure will look like this
+# Comandos rapidos
 
-![Directory Structure](https://raw.githubusercontent.com/FuelFrontend/generator-stt/master/app-structure.png "Directory Structure")
+Comandos de terminal para simplificar nuestras tareas.
 
-# Quick commands
+#### General - se aplican para Fullpack y angular
 
-Terminal commands to speed up repetitive tasks you do in projects. Simple app idea is to maintain as minimal as possible; so quick commands won't work.
-
-#### General - Applies to Full Pack and Angular
-
-* **Clean** _Remove all files from your build folder_
+* **Clean** _Remueve todos los archivos de tu carpeta build_
 
   ```````
   gulp clean
   ```````
 
-* **Zip** _Compress you app & save in `zip` folder with timestamp for quick sharing_
+* **Zip** _Comprime tu app y la salva en `zip`_
 
   ```````
   gulp zip
@@ -80,25 +63,25 @@ Terminal commands to speed up repetitive tasks you do in projects. Simple app id
 
 #### Angular App
 
-* **Controller** _Creates a controller in `app/js/controllers`_
+* **Controller** _Crea un controlador en `app/js/controllers`_
 
   ```````
   yo stt:controller <name>
   ```````
 
-* **Service** _Creates a service in `app/js/services`_
+* **Service** _Crea un servicio un servicio en `app/js/services`_
 
   ```````
   yo stt:service <name>
   ```````
 
-* **Directive** _Creates a directive in `app/js/directives`_
+* **Directive** _Crea una directiva en `app/js/directives`_
 
   ```````
   yo stt:directive <name>
   ```````
 
-* **Filter** _Creates a filter in `app/js/filters`_
+* **Filter** _Crea un filter en `app/js/filters`_
 
   ```````
   yo stt:filter <name>
@@ -106,9 +89,9 @@ Terminal commands to speed up repetitive tasks you do in projects. Simple app id
 
 # Environment
 
-Generator stt comes with development and producution modes. In default it runs in development mode.
+Generador stt tiene dos ambientes, uno de desarrollo y otro de producción. Por defecto corre en ambiente de desarrollo.
 
-You can switch to production mode using the following command
+Se puede cambiar de ambiente con el siguiente comando.
 
 ```````
 gulp prod
@@ -116,38 +99,14 @@ gulp prod
 
 # Bower Components
 
-Tip: While installation additional bower components to your project, make sure your save your new component
-in your `bower.json` file by installing like below
+Tip: Cuando instales nuevos componentes de bower , ten la certeza de no tener tu nuevo componente en tu `bower.json`
 
 ```````
 bower install <bower-component-name> --save
 ```````
 
-So that generator will automatically include your new bower component to `bower.js` file for usage
+El comando adicionara automaticamente el paquete a tu `bower.json`
 
-# Release Notes
+# Creditos
 
-You can find the detailed release notes [here](https://github.com/FuelFrontend/generator-stt/blob/master/release.md)
-
-<!-- TODO: Add documentaiton and enable this
-# Docs
-
-To be updated soon... stay tuned
--->
-
-# Options
-
-- `--skip-welcome-message` Skips the welcome message and take you to question.
-- `--skip-install` Skips the automatic execution of bower and npm after scaffolding has finished.
-
-# Contributions
-
-Contribution would be of great help to create a solid generator for frontend projects
-
-* Fork the project
-* Make your feature addition or bug fix
-* Send pull request
-
-**Active Contributors**
-
-[![Logesh Paul](https://avatars3.githubusercontent.com/u/41541?v=3&s=72)](http:/www.github.com/logeshpaul) [![Gokulakrishnan](https://avatars0.githubusercontent.com/u/2944237?v=3&s=72)](https://github.com/gokulkrishh) [![Thiyagarajan](https://avatars2.githubusercontent.com/u/9147343?v=3&s=72)](https://github.com/ThiyagarajanJ) [![Ritesh Babu](https://avatars3.githubusercontent.com/u/736660?v=3&s=72)](https://github.com/riteshbabu) [![Sugan Krishnan](https://avatars1.githubusercontent.com/u/680120?v=3&s=72)](https://github.com/rgksugan) [![Lubaib Gazir](https://avatars2.githubusercontent.com/u/6895882?v=3&s=72)](https://github.com/lubaibgazir)
+Este proyecto tomo como base el generador [[Generator-smacss](https://github.com/FuelFrontend/generator-smacss)
