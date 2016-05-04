@@ -16,12 +16,12 @@ npm install -g gulp
 npm install -g bower
 ```````
 
-### Install [smacss generator](https://github.com/FuelFrontend/generator-smacss)
+### Install [stt generator](https://github.com/FuelFrontend/generator-stt)
 
 *Type below commands in terminal*
 
 ```````
-npm install -g generator-smacss
+npm install -g generator-stt
 ```````
 
 **Clone the repo & cd into it**
@@ -103,30 +103,30 @@ gulp
 * **Controller** _Creates a controller in `app/js/controllers`_
 
   ```````
-  yo smacss:controller <name>
+  yo stt:controller <name>
   ```````
 
 * **Service** _Creates a service in `app/js/services`_
 
   ```````
-  yo smacss:service <name>
+  yo stt:service <name>
   ```````
 
 * **Directive** _Creates a directive in `app/js/directives`_
 
   ```````
-  yo smacss:directive <name>
+  yo stt:directive <name>
   ```````
 
 * **Filter** _Creates a filter in `app/js/filters`_
 
   ```````
-  yo smacss:filter <name>
+  yo stt:filter <name>
   ```````
 
 # Environment
 
-Generator Smacss comes with development and producution modes. In default it runs in development mode.
+Generator stt comes with development and producution modes. In default it runs in development mode.
 
 You can switch to production mode using the following command
 

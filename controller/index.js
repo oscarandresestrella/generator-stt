@@ -4,7 +4,7 @@ var util  = require('util'),
 
 var ScriptBase = require('../script-base.js');
 
-var smacssGenerator = module.exports = function smacssGenerator() {
+var sttGenerator = module.exports = function sttGenerator() {
   ScriptBase.apply(this, arguments);
 
   // if the controller name is suffixed with ctrl, remove the suffix
@@ -14,10 +14,10 @@ var smacssGenerator = module.exports = function smacssGenerator() {
   }
 };
 
-util.inherits(smacssGenerator, ScriptBase);
+util.inherits(sttGenerator, ScriptBase);
 
 // Function to create controller
-smacssGenerator.prototype.createControllerFiles = function createControllerFiles() {
+sttGenerator.prototype.createControllerFiles = function createControllerFiles() {
   this.log(
     chalk.yellow('\n┌──────────────────────────────────────────────────────────────┐ \n' +
                    '| Creating controller, please wait...                          | \n' +

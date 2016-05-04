@@ -8,7 +8,8 @@
     "angular-route": "1.2.6"<%    } if (includeAnimateModule) { %>,
     "angular-animate": "1.2.6"<%  } if (includeQuery) { %>,
     "jquery": "*"<%               } if (includeModernizr) { %>,
-    "modernizr": "*" <% } %>
+    "modernizr": "*" <% } %>,
+    "css-global-datacredito": ""
   },
   "devDependencies": {
 

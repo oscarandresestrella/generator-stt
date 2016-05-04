@@ -1,7 +1,9 @@
 /*-------------------------------------------------
-SMACSS: LAYOUT - COMMON
+stt: LAYOUT - COMMON
 -------------------------------------------------*/
-header,
+header{
+  margin: 0px auto;
+}
 section,
 footer {
   max-width: 800px;
@@ -9,7 +11,7 @@ footer {
 }
 
 /*-------------------------------------------------
-SMACSS: LAYOUT - HEADER
+stt: LAYOUT - HEADER
 -------------------------------------------------*/
 header {
     border-top: 2px solid $color-red;
@@ -27,7 +29,7 @@ header {
 }
 
 /*-------------------------------------------------
-SMACSS: LAYOUT - SECTION
+stt: LAYOUT - SECTION
 -------------------------------------------------*/
 section {
   padding: 40px 20px;
@@ -37,7 +39,7 @@ section {
 }
 
 /*-------------------------------------------------
-SMACSS: LAYOUT - FOOTER
+stt: LAYOUT - FOOTER
 -------------------------------------------------*/
 footer {
   color: $color-gray;

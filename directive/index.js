@@ -4,13 +4,13 @@ var util = require('util'),
 
 var ScriptBase = require('../script-base.js');
 
-var smacssGenerator = module.exports = function smacssGenerator() {
+var sttGenerator = module.exports = function sttGenerator() {
 	ScriptBase.apply(this, arguments);
 };
 
-util.inherits(smacssGenerator, ScriptBase);
+util.inherits(sttGenerator, ScriptBase);
 
-smacssGenerator.prototype.createDirectiveFiles = function createDirectiveFiles() {
+sttGenerator.prototype.createDirectiveFiles = function createDirectiveFiles() {
   this.log(
     chalk.yellow('\n┌──────────────────────────────────────────────────────────────┐ \n' +
                    '| Creating directive, please wait...                           | \n' +

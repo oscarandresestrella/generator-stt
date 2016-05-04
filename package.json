@@ -1,5 +1,5 @@
 {
-  "name": "generator-smacss",
+  "name": "generator-stt",
   "version": "0.2.8",
   "description": "Perfectionist Frontend Generator",
   "author": {
@@ -18,7 +18,7 @@
     "scaffold",
     "framework",
     "mvc",
-    "smacss",
+    "stt",
     "web-generator"
   ],
   "main": "app/index.js",

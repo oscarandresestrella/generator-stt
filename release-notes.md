@@ -10,16 +10,16 @@
 **v0.2.5**
 - Modularized Gulp file - Ever thought that the `gulpfile.js` is growing too large, We heard your inner voice.
   Gulp file is modularized using `require-dir` plugin; you can find your gulp tasks in `app\tasks\` folder
-- Update Notifier - CLI notifies if you are using an older version of `generator-smacss`
+- Update Notifier - CLI notifies if you are using an older version of `generator-stt`
 
 **v0.2.4**
-- Yet another New App Type - Admin Web App! With generator-smacss you can create bootstraped admin panels;
+- Yet another New App Type - Admin Web App! With generator-stt you can create bootstraped admin panels;
   which comes with predefined dashboard, forms, tabular data, sidebar, notification bar for creating
   admin apps faster
 - Added meta tag viewport to support responsive web.
 
 **v0.2.3**
-- New App Type - Restify! With generator-smacss you can create restify apps.
+- New App Type - Restify! With generator-stt you can create restify apps.
 - Code cleanup and improvements.
 
 **v0.2.2**
@@ -75,5 +75,5 @@
 
 **v0.1.0**
 - Initial working version of Static app generator
-- SMACSS approach - directory structure, naming convention
+- stt approach - directory structure, naming convention
 - Productivity helper tasks

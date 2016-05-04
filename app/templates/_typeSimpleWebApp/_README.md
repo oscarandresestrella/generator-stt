@@ -14,12 +14,12 @@ npm install -g yo
 npm install -g gulp
 ```````
 
-### Install [smacss generator](https://github.com/FuelFrontend/generator-smacss)
+### Install [stt generator](https://github.com/FuelFrontend/generator-stt)
 
 *Type below commands in terminal*
 
 ```````
-npm install -g generator-smacss
+npm install -g generator-stt
 ```````
 
 **Clone the repo & cd into it**

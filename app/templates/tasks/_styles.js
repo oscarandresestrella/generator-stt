@@ -4,6 +4,7 @@
 var gulp = require('gulp'),
     config = require('./config'),
     gulpIf = require('gulp-if'),
+    gulpCleanCSS = require('gulp-clean-css'),
     gulploadPlugins = require('gulp-load-plugins'),
     autoprefixer = require('gulp-autoprefixer');
 
@@ -27,12 +28,12 @@ gulp.task('sass', function () {
 gulp.task('styles', ['sass'], function () {
 
     console.log(config.notify.update('\n--------- Running CSS tasks --------------------------------------------\n'));
-    return gulp.src([config.source.css + '/**/*.css'])
+    return gulp.src([config.source.css + '/**/*.css','bower_components/css-global-datacredito/*.css'])
         .pipe(autoprefixer({
             browsers: config.browserVersion,
             cascade: false
         }))
-        .pipe(gulpIf(config.production, plugins.minifyCss()))
+        .pipe(gulpIf(config.production, gulpCleanCSS()))
         .pipe(plugins.concat('master.css'))
         .pipe(plugins.size())
         .pipe(gulp.dest(config.build.css));

@@ -3,6 +3,7 @@
 ===========================================================*/
 var gulp = require('gulp'),
     gulpIf = require('gulp-if'),
+    gulpHtmlmin = require('gulp-htmlmin'),
     gulploadPlugins = require('gulp-load-plugins');
 
 var plugins = gulploadPlugins();
@@ -16,7 +17,7 @@ gulp.task('html', function () {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(gulpIf(config.production, plugins.minifyHtml(config.opts)))
+        .pipe(gulpIf(config.production, gulpHtmlmin(config.opts)))
         .pipe(plugins.size())
         .pipe(gulp.dest(config.build.root));
 });

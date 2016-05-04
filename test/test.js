@@ -4,7 +4,7 @@
 var path = require('path');
 var helpers = require('yeoman-generator').test;
 
-describe('Generator Smacss test', function () {
+describe('Generator stt test', function () {
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
@@ -12,13 +12,13 @@ describe('Generator Smacss test', function () {
         return;
       }
 
-      this.smacss = helpers.createGenerator('smacss:app', [
+      this.stt = helpers.createGenerator('stt:app', [
         '../../app', [
           helpers.createDummyGenerator(),
           'mocha:app'
         ]
       ]);
-      this.smacss.options['skip-install'] = true;
+      this.stt.options['skip-install'] = true;
 
       done();
     }.bind(this));
@@ -37,12 +37,12 @@ describe('Generator Smacss test', function () {
       'app/index.html'
     ];
 
-    helpers.mockPrompt(this.smacss, {
+    helpers.mockPrompt(this.stt, {
       appType: ['typeFullPackWebApp'],
       appFeatures: ['includeQuery']
     });
 
-    this.smacss.run(function () {
+    this.stt.run(function () {
       helpers.assertFile(expected);
       done();
     });

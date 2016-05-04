@@ -2,14 +2,14 @@
 
 Perfectionist generator that scaffolds out different types of Frontend application
 
-[![Join the chat at https://gitter.im/FuelFrontend/generator-smacss](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/FuelFrontend/generator-smacss?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Travis CI](https://api.travis-ci.org/FuelFrontend/generator-smacss.svg?branch=master)](https://travis-ci.org/FuelFrontend/generator-smacss) [![Code Climate](https://codeclimate.com/github/FuelFrontend/generator-smacss/badges/gpa.svg)](https://codeclimate.com/github/FuelFrontend/generator-smacss)
+[![Join the chat at https://gitter.im/FuelFrontend/generator-stt](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/FuelFrontend/generator-stt?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Travis CI](https://api.travis-ci.org/FuelFrontend/generator-stt.svg?branch=master)](https://travis-ci.org/FuelFrontend/generator-stt) [![Code Climate](https://codeclimate.com/github/FuelFrontend/generator-stt/badges/gpa.svg)](https://codeclimate.com/github/FuelFrontend/generator-stt)
 
-![Generator Smacss](https://raw.githubusercontent.com/FuelFrontend/generator-smacss/master/smacss-in-action.png "Generator Smacss")
+![Generator stt](https://raw.githubusercontent.com/FuelFrontend/generator-stt/master/stt-in-action.png "Generator stt")
 
 # Features
 
 - **Different Projects; One Generator** - Create your type of project in fairly simple steps
-- **Highly Maintainable** - Uses [SMACSS](https://smacss.com/) approach (BEM, OOCSS, ITCSS in backlog)
+- **Highly Maintainable** - Uses [stt](https://stt.com/) approach (BEM, OOCSS, ITCSS in backlog)
 - **Readymade** — Directory structure, Naming convention, Linking your app done right.
 - **Speedy Workflow** - CSS Preprocessor (Sass), Partials, Browser Sync, Live reload.
 - **Performance Matters**  - Minify HTML, CSS, & JS. Optimize Images.
@@ -32,14 +32,14 @@ You need to have [NodeJS](http://nodejs.org/) & [Yeoman](http://yeoman.io/) inst
 npm install -g yo
 ````````
 
-Install smacss generator
+Install stt generator
 ```````
-npm install --global generator-smacss
+npm install --global generator-stt
 ```````
 
 **Creating project**
 
-- Run `yo smacss`
+- Run `yo stt`
 - Answer simple questions in terminal
 - Generator will automatically try to install dependencies in your project folder.
 
@@ -58,7 +58,7 @@ At this stage your project is setup and dependencies are installed, It's showtim
 
 Your directory structure will look like this
 
-![Directory Structure](https://raw.githubusercontent.com/FuelFrontend/generator-smacss/master/app-structure.png "Directory Structure")
+![Directory Structure](https://raw.githubusercontent.com/FuelFrontend/generator-stt/master/app-structure.png "Directory Structure")
 
 # Quick commands
 
@@ -83,30 +83,30 @@ Terminal commands to speed up repetitive tasks you do in projects. Simple app id
 * **Controller** _Creates a controller in `app/js/controllers`_
 
   ```````
-  yo smacss:controller <name>
+  yo stt:controller <name>
   ```````
 
 * **Service** _Creates a service in `app/js/services`_
 
   ```````
-  yo smacss:service <name>
+  yo stt:service <name>
   ```````
 
 * **Directive** _Creates a directive in `app/js/directives`_
 
   ```````
-  yo smacss:directive <name>
+  yo stt:directive <name>
   ```````
 
 * **Filter** _Creates a filter in `app/js/filters`_
 
   ```````
-  yo smacss:filter <name>
+  yo stt:filter <name>
   ```````
 
 # Environment
 
-Generator Smacss comes with development and producution modes. In default it runs in development mode.
+Generator stt comes with development and producution modes. In default it runs in development mode.
 
 You can switch to production mode using the following command
 
@@ -127,7 +127,7 @@ So that generator will automatically include your new bower component to `bower.
 
 # Release Notes
 
-You can find the detailed release notes [here](https://github.com/FuelFrontend/generator-smacss/blob/master/release.md)
+You can find the detailed release notes [here](https://github.com/FuelFrontend/generator-stt/blob/master/release.md)
 
 <!-- TODO: Add documentaiton and enable this
 # Docs
