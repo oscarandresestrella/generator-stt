@@ -1,11 +1,11 @@
 {
   "name": "generator-stt",
-  "version": "0.2.8",
-  "description": "Perfectionist Frontend Generator",
+  "version": "0.0.1",
+  "description": "Generador Frontend STT",
   "author": {
     "name": "Oscar Pabon",
     "email": "opabon@stt.com.co",
-    "url": "https://github.com/oscarandresestrellal"
+    "url": "https://github.com/oscarandresestrella"
   },
   "licenses": [
     {
