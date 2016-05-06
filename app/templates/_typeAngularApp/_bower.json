@@ -2,14 +2,19 @@
   "name": "<%= appName %>",
   "version": "0.0.1",
   "dependencies": {
-    "angular": "1.2.6"<% if (includeResourceModule) { %>,
-    "angular-resource": "1.2.6"<% } if (includeSanitizeModule) { %>,
-    "angular-sanitize": "1.2.6"<% } if (includeRouteModule) { %>,
-    "angular-route": "1.2.6"<%    } if (includeAnimateModule) { %>,
-    "angular-animate": "1.2.6"<%  } if (includeQuery) { %>,
+    "requirejs": "~2.2.0",
+		"requirejs-text": "~2.0.14",
+    "bootstrap": "~3.3.6",
+    "angular": "1.5.3"<% if (includeSanitizeModule) { %>,
+    "angular-sanitize": "1.5.3"<% } if (includeUiRouterModule) { %>,
+    "angular-ui-router": ""<%    } if (includeAnimateModule) { %>,
+    "angular-animate": "1.2.6"<%  } if (includeBreadcrumb) { %>,
+    "angular-breadcrumb": ""<%  } if (includeAtTable) { %>,
+    "at-table": ""<%  } if (includeQuery) { %>,
     "jquery": "*"<%               } if (includeModernizr) { %>,
     "modernizr": "*" <% } %>,
-    "css-global-datacredito": ""
+    "css-global-datacredito": "",
+    "underscore": ""
   },
   "devDependencies": {
 

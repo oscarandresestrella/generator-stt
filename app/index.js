@@ -169,20 +169,20 @@ sttGenerator.prototype.askAngularModules = function askAngularModules() {
             message: 'Cuales modulos de angular quieres añadir',
             type: 'checkbox',
             choices:[{
-                name: ' Angular Route',
-                value: 'includeRouteModule',
+                name: ' Angular Ui Route',
+                value: 'includeUiRouterModule',
                 checked: true
-            },{
-                name: ' Angular Resource',
-                value: 'includeResourceModule',
-                checked: false
             },{
                 name: ' Angular Sanitize',
                 value: 'includeSanitizeModule',
                 checked: false
             },{
-                name: ' Angular Animate',
-                value: 'includeAnimateModule',
+                name: ' Angular Table',
+                value: 'includeAtTable',
+                checked: false
+            },{
+                name: ' Angular Breadcrumb',
+                value: 'includeBreadcrumb',
                 checked: false
             }]
         }];
@@ -192,24 +192,28 @@ sttGenerator.prototype.askAngularModules = function askAngularModules() {
                 return answers.angularModules.indexOf(mod) !== -1;
             };
 
-            this.includeRouteModule = hasModule('includeRouteModule');
-            this.includeResourceModule = hasModule('includeResourceModule');
+            this.includeUiRouterModule = hasModule('includeUiRouterModule');
+            this.includeBreadcrumb = hasModule('includeBreadcrumb');
             this.includeSanitizeModule = hasModule('includeSanitizeModule');
+            this.includeAtTable = hasModule('includeAtTable');
             this.includeAnimateModule = hasModule('includeAnimateModule');
 
             var angMods = [];
 
-            if (this.includeRouteModule) {
-              angMods.push("'ngRoute'");
-            }
-            if (this.includeResourceModule) {
-              angMods.push("'ngResource'");
+            if (this.includeUiRouterModule) {
+              angMods.push("'ui.router'");
             }
             if (this.includeSanitizeModule) {
               angMods.push("'ngSanitize'");
             }
             if (this.includeAnimateModule) {
               angMods.push("'ngAnimate'");
+            }
+            if (this.includeAtTable) {
+              angMods.push("'angular-table'");
+            }
+            if (this.includeBreadcrumb) {
+              angMods.push("'ncy-angular-breadcrumb'");
             }
 
             if (angMods.length) {
@@ -250,6 +254,11 @@ sttGenerator.prototype.scaffoldFolders = function scaffoldFolders() {
           }
           this.mkdir(this.appName + '/build');
       }
+      if(this.appType === 'typeAngularApp') {
+          this.mkdir(this.appName + '/app/templates');
+          this.mkdir(this.appName + '/app/js/controllers');
+          this.mkdir(this.appName + '/app/js/directives');
+      }
     }
 };
 
@@ -270,6 +279,10 @@ sttGenerator.prototype.copyHTMLFiles = function copyHTMLFiles() {
       this.template("partials/_header.html", this.appName + "/app/partials/_header.html", sttGenerator.context);
       this.template("partials/_footer.html", this.appName + "/app/partials/_footer.html", sttGenerator.context);
   }
+  if(this.appType === 'typeAngularApp') {
+    this.template("partials/_index.html", this.appName + "/app/templates/index.html", sttGenerator.context);
+    this.template("partials/_vista2.html", this.appName + "/app/templates/vista2.html", sttGenerator.context);
+  }
 
   // Files related to Aadmin Web App
   if(this.appType === 'typeAdminWebApp') {
@@ -283,7 +296,7 @@ sttGenerator.prototype.copyHTMLFiles = function copyHTMLFiles() {
 
 // Copying - CSS stylesheet files
 sttGenerator.prototype.copyCSSFiles = function copyCSSFiles() {
-
+  console.log('entre');
   if (this.appType === 'typeRestifyApp') {
     return false;
   }
@@ -328,6 +341,8 @@ sttGenerator.prototype.copyFonts = function copyFonts() {
 sttGenerator.prototype.copyJSFiles = function copyJSFiles() {
     if (this.appType === 'typeAngularApp') {
         this.template("js/_angular_application.js", this.appName + "/app/js/application.js", sttGenerator.context);
+        this.template("js/_angular_indexcontroller.js", this.appName + "/app/js/controllers/index.js", sttGenerator.context);
+        this.template("js/_angular_indexcontroller.js", this.appName + "/build/js/controllers/index.js", sttGenerator.context);
     }
     else if (this.appType === 'typeRestifyApp') {
       this.template("_typeRestifyApp/_app.js", this.appName + "/app.js", sttGenerator.context );

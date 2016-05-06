@@ -1,0 +1,50 @@
+/*-------------------------------------------------
+stt: LAYOUT - COMMON
+-------------------------------------------------*/
+header{
+  margin: 0px auto;
+}
+section,
+footer {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+/*-------------------------------------------------
+stt: LAYOUT - HEADER
+-------------------------------------------------*/
+header {
+    border-top: 2px solid $color-red;
+    padding: 10px;
+    color: $color-red;
+
+    .title {
+      font-size: em(30); // em to px convertor
+    }
+
+    .caption {
+      padding-top: 10px;
+      font-size: 14px;
+    }
+}
+
+/*-------------------------------------------------
+stt: LAYOUT - SECTION
+-------------------------------------------------*/
+section {
+  padding: 40px 20px;
+  color: $color-white;
+  font-size: em(70);
+  font-weight: 300;
+}
+
+/*-------------------------------------------------
+stt: LAYOUT - FOOTER
+-------------------------------------------------*/
+footer {
+  color: $color-gray;
+  font-size: 11px;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}

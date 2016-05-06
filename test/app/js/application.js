@@ -1,5 +1,5 @@
 /*================================================================
-App <%= site_name %>
+App test
 ==================================================================*/
 'use strict';
 require.config({
@@ -28,7 +28,7 @@ require.config({
 require(['angular', 'jquery'], function() {
   require(['bootstrap','angularsanitize','underscore','angularuirouter','angularbreadcrumb'], function() {
     window.app = {};
-    window.app = angular.module('<%= site_name %>', ['ui.router','ncy-angular-breadcrumb']);
+    window.app = angular.module('test', ['ui.router','ncy-angular-breadcrumb']);
     require(['js/controllers/index'], function (indexController) {
       window.app.controller('indexController', indexController);
       window.app.config(['$stateProvider','$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
@@ -52,7 +52,7 @@ require(['angular', 'jquery'], function() {
           });
 
       }]);
-      angular.bootstrap(document.getElementById('<%= site_name %>'), ['<%= site_name %>']);
+      angular.bootstrap(document.getElementById('test'), ['test']);
     });
   });
 });

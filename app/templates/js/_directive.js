@@ -1,17 +1,15 @@
 /*================================================================
 Directive = <%= cameledName %>
 ==================================================================*/
+define([], function() {
+	'use strict';
 
-app.directive('<%= cameledName %>', ['$rootScope', function ($rootScope) {
-  'use strict';
-
-	return {
-		restrict: 'A',
-		link: function (scope, element, attrs) {
-			console.log('Directive === <%= cameledName %>');
-		}
-	};
-
-}]);
-
-/*-----  End of Directive = <%= cameledName %>  ------*/
+	function <%= cameledName %>Directive() {
+		return {
+			restrict: 'E',
+			controller: '',
+			template: 'template'
+		};
+	}
+	return <%= cameledName %>Directive;
+});
