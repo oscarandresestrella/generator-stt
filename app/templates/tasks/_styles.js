@@ -28,7 +28,7 @@ gulp.task('sass', function () {
 gulp.task('styles', ['sass'], function () {
 
     console.log(config.notify.update('\n--------- Running CSS tasks --------------------------------------------\n'));
-    return gulp.src([config.source.css + '/**/*.css','bower_components/css-global-datacredito/*.css'])
+    return gulp.src(['bower_components/bootstrap/dist/css/bootstrap.min.css',config.source.css + '/**/*.css','bower_components/css-global-datacredito/*.css'])
         .pipe(autoprefixer({
             browsers: config.browserVersion,
             cascade: false

@@ -5,7 +5,8 @@
     <% if (includeQuery) { %>
     "jquery": "*"<% } if (includeModernizr) { %>,
     "modernizr": "*" <% } %>,
-    "css-global-datacredito": ""
+    "css-global-datacredito": "",
+    bootstrap:"",
   },
   "devDependencies": {
 
