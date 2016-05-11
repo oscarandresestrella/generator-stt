@@ -27,6 +27,7 @@
         "gulp-webserver": "^0.6.0",
         "gulp-filter": "^2.0.2",
         "gulp-sourcemaps": "^1.5.0",
+        "gulp-contrib-copy": "^0.1.2",
         "del": "~1.1.1",
         "open": "~0.0.5",
         "chalk": "~0.5.1",
